@@ -48,6 +48,7 @@ Running docker for mongoose:
 
 ```shell
 $ make run-dev
+$ docker-compose up -d
 ```
 
 ## Running the Project
