@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    // "incremental": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "sourceMap": true,
+    "paths": {
+      "@db": ["src/_db/index"],
+      "@db/*": ["src/_db/*"],
+      "@config": ["src/_config/index"],
+      "@config/*": ["src/_config/*"],
+    },
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
