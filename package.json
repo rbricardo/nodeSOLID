@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=local tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "dev": "NODE_ENV=local tsnd -r tsconfig-paths/register --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "test": "NODE_ENV=local jest"
   },
   "keywords": [],
