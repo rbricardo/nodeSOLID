@@ -1,12 +1,12 @@
-import { IContactsRepository } from "../../repositories/IContactsRepository";
-import { Contact } from "src/entities/Contact";
+import { IContactsRepository } from '../../repositories/IContactsRepository'
+import { Contact } from 'src/entities/Contact'
 
 export class RemoveContactUseCase {
-	constructor(
+	constructor (
 		private contactRepository: IContactsRepository,
 	) { }
 
-	async execute(id: string): Promise<void> {
+	async execute (id: string): Promise<void> {
 		try {
 			await this.contactRepository.remove(id)
 		} catch (error) {

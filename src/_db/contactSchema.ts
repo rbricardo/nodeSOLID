@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import mongoose, { Schema, Document } from 'mongoose'
 
 export interface IContact extends Document {
@@ -9,11 +10,11 @@ export interface IContact extends Document {
 }
 
 const contactSchema: Schema = new Schema({
-  _id: String,
-  name: String,
-  dateOfBirth: String,
-  age: Number,
-  gender: String,
-});
+	_id: String,
+	name: String,
+	dateOfBirth: String,
+	age: Number,
+	gender: String,
+})
 
-export const ContactSchema = mongoose.model<IContact>('Contact', contactSchema);
+export const ContactSchema = mongoose.model<IContact>('Contact', contactSchema)

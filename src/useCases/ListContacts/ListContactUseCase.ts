@@ -1,12 +1,12 @@
-import { IContactsRepository } from "../../repositories/IContactsRepository";
-import { Contact } from "src/entities/Contact";
+import { IContactsRepository } from '../../repositories/IContactsRepository'
+import { Contact } from 'src/entities/Contact'
 
 export class ListContactUseCase {
-	constructor(
+	constructor (
 		private contactRepository: IContactsRepository,
 	) { }
 
-	async execute(): Promise<Contact[]> {
+	async execute (): Promise<Contact[]> {
 		try {
 			return await this.contactRepository.list()
 		} catch (error) {

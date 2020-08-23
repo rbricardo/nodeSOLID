@@ -1,15 +1,15 @@
 import { MongoContactsRepository } from '../../repositories/implementations/MongoUserRepository'
-import { ListContactUseCase } from "./ListContactUseCase";
-import { ListContactController } from "./ListContactController";
+import { ListContactUseCase } from './ListContactUseCase'
+import { ListContactController } from './ListContactController'
 
 const mongoContactsRepository = new MongoContactsRepository()
 
 const listContactsUseCase = new ListContactUseCase(
-    mongoContactsRepository,
+	mongoContactsRepository,
 )
 
 const listContactsController = new ListContactController(
-    listContactsUseCase
+	listContactsUseCase,
 )
 
 export { listContactsUseCase, listContactsController }

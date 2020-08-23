@@ -7,19 +7,19 @@ import { removeContactsController } from './useCases/RemoveContact'
 const router = Router()
 
 router.get('/contacts', (request: Request, response: Response) => {
-    return listContactsController.handle(request, response)
+	return listContactsController.handle(request, response)
 })
 
 router.post('/contacts', (request: Request, response: Response) => {
-    return createContactController.handle(request, response)
+	return createContactController.handle(request, response)
 })
 
 router.delete('/contacts/:id', (request: Request, response: Response) => {
-    return removeContactsController.handle(request, response)
+	return removeContactsController.handle(request, response)
 })
 
 router.get('/contacts/:id', (request: Request, response: Response) => {
-    return listDetailsContactsController.handle(request, response)
+	return listDetailsContactsController.handle(request, response)
 })
 
 export { router }

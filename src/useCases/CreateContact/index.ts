@@ -5,11 +5,11 @@ import { MongoContactsRepository } from '../../repositories/implementations/Mong
 const mongoContactsRepository = new MongoContactsRepository()
 
 const createContactUseCase = new CreateContactUseCase(
-    mongoContactsRepository,
+	mongoContactsRepository,
 )
 
 const createContactController = new CreateContactController(
-    createContactUseCase
+	createContactUseCase,
 )
 
 export { createContactUseCase, createContactController }

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { Contact } from '../entities/Contact'
 
 export interface IContactsRepository {

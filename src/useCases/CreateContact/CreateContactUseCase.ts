@@ -1,14 +1,14 @@
-import { IContactsRepository } from "../../repositories/IContactsRepository";
-import { ICreateContactRequestDTO } from "./CreateContactDTO";
-import { Contact } from "../../entities/Contact";
+import { IContactsRepository } from '../../repositories/IContactsRepository'
+import { ICreateContactRequestDTO } from './CreateContactDTO'
+import { Contact } from '../../entities/Contact'
 
 export class CreateContactUseCase {
-	constructor(
+	// eslint-disable-next-line no-useless-constructor
+	constructor (
 		private contactRepository: IContactsRepository,
 	) { }
 
-	async execute({ name, dateOfBirth, gender }: ICreateContactRequestDTO) {
-
+	async execute ({ name, dateOfBirth, gender }: ICreateContactRequestDTO) {
 		const contact = new Contact(null, name, dateOfBirth, gender)
 
 		if (!name || !dateOfBirth || !gender) {
@@ -17,9 +17,8 @@ export class CreateContactUseCase {
 
 		if (contact.age < 18) {
 			throw new Error('A idade precisa ser maior que 18')
-	}
+		}
 
 		await this.contactRepository.save(contact)
-
 	}
 }
